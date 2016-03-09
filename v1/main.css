@@ -1,0 +1,145 @@
+
+body{
+    /* Absolute positioning to prevent Up/down on remote from scrolling */
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 0;
+
+    /* setting assumed width and height of browser window */
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+
+    /* text color */
+    color: white;
+	background:none !important;
+}
+
+#CurrentTV{
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top:10px;
+    transition: transform 0.5s ease-out;
+    -webkit-transition:transform 0.5s ease-out;
+}
+#CurrentTV.closed{
+    transform: translateY(40px);
+    -webkit-transform:translateY(40px);
+
+}
+#SmallMenu{
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    transition: transform 1s ease-out;
+    -webkit-transition:  -webkit-transform 1s ease-out;
+   /* padding: 10px;*/
+    font-weight: bold;
+
+}
+#SmallMenu{
+    background-image:url('assets/BellLogoSmall.png');
+    background-size:contain;
+
+    background-repeat: no-repeat;
+}
+#SmallMenu.closed{
+    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+}
+#SouceControl{
+    display: inline-block;
+    margin-left: 45%;
+}
+
+/*#SouceControl a:active{
+    !*background-color: white;*!
+    text-shadow: 2px 2px white;
+}*/
+/*
+#SouceControl a.selected{
+    color: red;
+}
+*/
+
+@keyframes blink {
+     25% { color: white; }
+     50% { color:red; }
+     75% { color: white; }
+ }
+
+@-webkit-keyframes blink {
+    25% { color: #d11eff; }
+    38% { color: #bbdeff; }
+    55% { color: #d23bff; }
+    70% { color:#bbdeff; }
+    90% { color: #a124ff; }
+
+}
+.blink {
+    animation: blink 3s linear;
+    -webkit-animation: blink 3s linear;
+}
+.hidden{
+    display: none;
+}
+/* style for plugins to ensure no interaction with other elements */
+.plugin {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
+.pull-right{
+    float: right;
+}
+/* Logging */
+
+#SourceList{
+    color: black;
+    position: absolute;
+    top:200px;
+    left: 20px;
+    width: 600px;
+}
+#SourceList .selected{
+    background-color: khaki;
+}
+#SourceList ul{
+    list-style: none;
+    font-size: x-large;
+}
+#DebugClear{
+    float: right;
+}
+#DebugBox {
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    background-color: white;
+    color: black;
+}
+
+/*slider thumbnail*/
+
+
+
+
+
+#source-to-see{
+    position: absolute;
+    top: 34%;
+    left: 10%;
+    height: 28%;
+    width: 20%;
+}
+/* Logging colors */
+.logNum {
+    color: grey;
+}
