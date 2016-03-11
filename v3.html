@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+	<title>Bell Canada Source Switch</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:light&v1">
+	<script language='javascript' type='text/javascript' src='v1/jquery-2.1.4.min.js'></script>
+	<object id='sefPlugin' class='plugin' classid='clsid:SAMSUNG-INFOLINK-SEF'></object>
+	<script language='javascript' type='text/javascript' src='v1/switch3.js'></script>
+	<link rel='stylesheet' href='v1/main.css' type='text/css' />
+</head>
+<script>
+	var appsettings={
+		hide_menu_delay:30,
+		watching:'You are watching',
+		loading:'Loading...'
+	}
+</script>
+<style>
+	body{
+		background-color: black;
+	}
+	#BgImage{
+		position: static;
+		left:0;
+		right: 0;
+		width: 1280px;
+		height: 720px;
+
+		transition: transform 1s ease-out;
+		-webkit-transition:  -webkit-transform 1s ease-out;
+		/*background-image:url('v1/assets/BellLogo.png');*/
+		background-color: white;
+	}
+	#BgImage.closed{
+		-webkit-transform: translateY(750px);
+	}
+	#SouceControl>a{
+		font-family: 'Open Sans Condensed', serif;
+		background-size: cover;
+		background-image:url('v1/assets/Bell_Normal.png');
+		color:white;
+		text-align: center;
+		line-height: 40px;
+		margin-right: 20px;
+		text-decoration: none;
+		width:100px;
+		height: 40px;
+		display: inline-block;
+		font-size: 30px;
+		font-weight: 100;
+	}
+	#SouceControl>a.selected{
+		color: #2474ff;
+		background-image:url('v1/assets/Bell_Active.png');
+
+
+	}
+	#FirstButtons{
+		width: 500px;
+		height: 200px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	#FirstButtons a{
+		font-family: 'Open Sans Condensed', serif;
+		background-size: cover;
+		color:white;
+		text-align: center;
+		margin-right: 20px;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 80px;
+		font-weight: 100;
+		background-color: #0077bf;
+		border-radius: 5px;
+		padding:0 12px 0 12px;
+		-webkit-box-shadow: 5px 5px 5px gray;
+
+	}
+	/*#SatBtn{
+		background-image:url('v1/assets/Bell_Normal.png');
+
+	}
+	#SatBtn.selected{
+		background-image:url('v1/assets/Bell_Active.png');
+	}
+	#FibeBtn{
+		background-image:url('v1/assets/Bell_Normal.png');
+	}
+	#FibeBtn.selected{
+		background-image:url('v1/assets/Bell_Active.png');
+	}*/
+</style>
+<body>
+<div id="BgImage">
+	<div id="FirstButtons">
+		<div>
+			<a id="SatBtn1" href="#54" data-id="DP" data-cmd="54" data-text="Satellite" class="btnselect" ><span>Satellite</span></a>
+			<a id="FibeBtn2" herf="#31"  data-id="HDMI" data-cmd="31" data-text="FIBE TV" class="btnselect"><span>Fibe TV</span></a>
+		</div>
+
+	</div>
+</div>
+	<div id="SmallMenu" class="closed">
+		<div id="Logo">
+			<img src="v1/assets/BellLogoSmall.png" />
+<style>
+	#Logo>img{
+		margin: 7px 0 0 0;
+		width: 46px;
+		height: 24px;
+		padding: 0;
+		vertical-align:baseline;
+		margin-left: 20px;
+
+	}
+	#Logo{
+		display: inline-block;
+		height:42px;
+		width: 100px;
+		/*padding: 3px;*/
+	background-image:url('v1/assets/Bell_Active.png');
+		background-size:contain;
+		background-repeat: no-repeat;
+
+	}
+</style>
+		</div>
+		<div id="SouceControl">
+			<a id="SatBtn" href="#54" data-id="DP" data-cmd="54" data-text="Satellite" ><span>Satellite</span></a>
+			<a id="FibeBtn" herf="#31"  data-id="HDMI" data-cmd="31" data-text="FIBE TV"><span>Fibe TV</span></a>
+		</div>
+		<div id="CurrentTV">
+			<span id="currentState">Select TV source</span> <span id="watching"></span>
+		</div>
+
+	</div>
+
+</body>
+</html>

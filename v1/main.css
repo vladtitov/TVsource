@@ -40,19 +40,15 @@ body{
     font-weight: bold;
 
 }
-#SmallMenu{
-    background-image:url('assets/BellLogoSmall.png');
-    background-size:contain;
 
-    background-repeat: no-repeat;
-}
+
 #SmallMenu.closed{
     transform: translateY(40px);
     -webkit-transform: translateY(40px);
 }
 #SouceControl{
     display: inline-block;
-    margin-left: 45%;
+    margin-left: 32%;
 }
 
 /*#SouceControl a:active{
