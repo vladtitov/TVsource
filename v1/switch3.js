@@ -31,7 +31,7 @@ Main.onLoad = function (opts) {
 	var initAPI = function(){
 		console.log('init API');
 		Main.sefPlugin = $('#sefPlugin')[0];
-	//	Main.sefPlugin.Open('Window', '1.000', 'Window');
+		Main.sefPlugin.Open('Window', '1.000', 'Window');
 
 		//Main.sefPlugin.Close();
 	}
@@ -58,7 +58,7 @@ Main.onLoad = function (opts) {
 
 	var switchSorce = function(num){
 		current = parseInt(num)
-		//Main.sefPlugin.Execute('SetSource',current);
+		Main.sefPlugin.Execute('SetSource',current);
 		$('#CurrentTV').removeClass('closed');
 		$('#watching').text(selected.text());
 		$('#currentState').text(opts.loading);
